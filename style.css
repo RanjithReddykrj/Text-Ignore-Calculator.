@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Console", sans-serif;
+}
+
+
+.container {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #fefefe, #967de8);
+}
+
+.calculator {
+  background: linear-gradient(to bottom, #fefefe, #e3e7ea);
+  width: 300px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.295);
+  border-radius: 15px;
+  position: relative;
+}
+
+.buttons {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  background: #f3f5f7;
+  color: #685c40;
+  border-radius: 90px;
+  cursor: pointer;
+  box-shadow: 2px 2px 7px 1px rgba(187, 187, 187, 0.171);
+  border: solid white 0.5px;
+}
+
+.screen textarea {
+  background: #f9d0a4;
+  min-height: 200px;
+  resize: none;
+  margin: 0;
+  padding: 25px;
+  font-size: 30px;
+  font-weight: 100;
+  overflow: scroll;
+  /* display: flex;
+  align-items: center;
+  justify-content: flex-end; */
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background: #ef8663;
+
+  color: white;
+  font-size: 30px;
+  border: solid #e6ddec 1px;
+  box-shadow: 2px 2px 7px 0px rgba(98, 0, 172, 0.37);
+}
+
+.equal-sign {
+  grid-column: 4;
+  grid-row: 2 / span 4;
+  background: #ec693e;
+  color: white;
+  border: solid #f4d9d5 1px;
+}
+
+.operator:hover {
+  background: #fa502c;
+  color: white;
+  border: none;
+}
+
+.clear {
+  background: #feb92d;
+  color: #c3963f;
+}
+
+.clear:hover {
+  filter: brightness(110%);
+  color: white;
+}
+
+
+
+.equal-sign:hover {
+  filter: brightness(96%);
+}
+
+.savenote {
+  text-align: center;
+
+}
+
+.savenote button {
+  font-size: 18px;
+  color:white;
+  width: 95%;
+  background-color: #ef8663;
+  min-height: 30px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 90%;
+  }
+  .savenote button{
+    padding-top: 3px;
+     padding-bottom: 3px;    
+  }
+}
